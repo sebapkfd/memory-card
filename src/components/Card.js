@@ -10,13 +10,15 @@ const Card = (props) =>{
             clean();
         }
     }
+    const divStyle = {
+        color: 'white',
+        backgroundColor:`${card.cardName}`,
+    };
 
     return (
-        <div className="Card" onClick={clickCard}>
+        <div className="Card" onClick={clickCard} style={divStyle}>
             <h3>{card.cardName}</h3>
-            <h3>{card.selected.toString()}</h3>
         </div>
     )
 }
-
 export default Card;

@@ -7,12 +7,18 @@ function Game() {
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
     const [cards, setCards] = useState([
-        {cardName: '1', selected : false},
-        {cardName: '2', selected : false},
-        {cardName: '3', selected : false},
-        {cardName: '4', selected : false},
-        {cardName: '5', selected : false},
-        {cardName: '6', selected : false}
+        {cardName: 'Crimson', selected : false},
+        {cardName: 'Navy', selected : false},
+        {cardName: 'Green', selected : false},
+        {cardName: 'Gold', selected : false},
+        {cardName: 'Orange', selected : false},
+        {cardName: 'Purple', selected : false},
+        {cardName: 'Brown', selected : false},
+        {cardName: 'Pink', selected : false},
+        {cardName: 'Gray', selected : false},
+        {cardName: 'Olive', selected : false},
+        {cardName: 'Aqua', selected : false},
+        {cardName: 'Teal', selected : false}
     ])
     
 
@@ -39,12 +45,12 @@ function Game() {
         if(bestScore <= score) {
             setBestScore(score);
         }
-    }, [score])
+    }, [bestScore, score])
 
     return (
         <div className="Game">
             <Title/>
-            <ScoreBoard //Don't touch!!
+            <ScoreBoard
                 score={score}
                 bestScore={bestScore}
             />
