@@ -1,9 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Card from './Card';
 
 const Cardboard = (props) => {
 
-    const {setScore, cards} = props;
+    const {setScore, resetScore, cards} = props;
+
+    useEffect(() => {
+        for (let i = cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cards[i], cards[j]] = [cards[j], cards[i]];
+        }
+    }, [cards])
 
     return (
         <div className="Cardboard">
@@ -11,6 +18,7 @@ const Cardboard = (props) => {
                 return <Card
                     card={card}
                     select={setScore}
+                    clean={resetScore}
                     key={card.cardName}
                 />
             })}
