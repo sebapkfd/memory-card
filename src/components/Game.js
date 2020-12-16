@@ -8,19 +8,19 @@ function Game() {
     const [bestScore, setBestScore] = useState(0);
     const [cards, setCards] = useState([
         {cardName: 'Red', selected : false},
-        {cardName: 'Blue', selected : true},
+        {cardName: 'Blue', selected : false},
         {cardName: 'Green', selected : false}
     ])
     
 
-    const addScore = (name) => {
-        // Add validation
-        // just add score if it touches a card with selected == =false
-        cards.forEach((card) => {
-            if(card.cardName === name) {
-                //change
+    const addScore = (name) => {    
+        let updatedCards = cards.map(card => {
+            if(card.cardName === name){
+                return {...card, selected: !card.selected}
             }
+            return card;
         })
+        setCards(updatedCards);
         setScore(score + 1);
     }
 
