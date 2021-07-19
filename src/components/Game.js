@@ -11,7 +11,7 @@ function Game() {
 
     const selectCard = (name) => {    
         let updatedCards = cards.map(card => {
-            if(card.cardName === name){
+            if(card.name === name){
                 return {...card, selected: !card.selected}
             }
             return card;

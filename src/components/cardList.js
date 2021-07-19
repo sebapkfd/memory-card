@@ -1,16 +1,16 @@
 const cardList = [
-    {cardName: 'Crimson', selected : false},
-    {cardName: 'Navy', selected : false},
-    {cardName: 'Green', selected : false},
-    {cardName: 'Gold', selected : false},
-    {cardName: 'Orange', selected : false},
-    {cardName: 'Purple', selected : false},
-    {cardName: 'Brown', selected : false},
-    {cardName: 'Pink', selected : false},
-    {cardName: 'Gray', selected : false},
-    {cardName: 'Olive', selected : false},
-    {cardName: 'Aqua', selected : false},
-    {cardName: 'Teal', selected : false}
+    {name: 'Crimson', selected : false},
+    {name: 'Navy', selected : false},
+    {name: 'Green', selected : false},
+    {name: 'Gold', selected : false},
+    {name: 'Orange', selected : false},
+    {name: 'Purple', selected : false},
+    {name: 'Brown', selected : false},
+    {name: 'Pink', selected : false},
+    {name: 'Gray', selected : false},
+    {name: 'Olive', selected : false},
+    {name: 'Aqua', selected : false},
+    {name: 'Teal', selected : false}
 ]
 
 export default cardList;

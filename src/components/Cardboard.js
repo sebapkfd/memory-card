@@ -18,7 +18,7 @@ const Cardboard = (props) => {
                     card={card}
                     select={setScore}
                     clean={resetScore}
-                    key={card.cardName}
+                    key={card.name}
                 />
             })}
         </div>
