@@ -13,7 +13,7 @@ const Card = (props) =>{
     };
 
     return (
-        <div className="Card" onClick={clickCard} style={divStyle}>
+        <div className="card" onClick={clickCard} style={divStyle}>
             <h3>{card.name}</h3>
         </div>
     )

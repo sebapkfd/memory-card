@@ -12,7 +12,7 @@ const Cardboard = (props) => {
     }, [cards])
 
     return (
-        <div className="Cardboard">
+        <div className="card-board">
             {cards.map((card) => {
                 return <Card
                     card={card}

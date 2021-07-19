@@ -22,7 +22,8 @@ body {
     overflow: auto;
 }
 
-.Title, .ScoreBoard {
+.title,
+.score-board {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -30,12 +31,12 @@ body {
     color: white;
 }
 
-.TitleText {
+.title__text {
     font-size: 38px;
     text-align: center;
 }
 
-.Cardboard {
+.card-board {
     width: 100%;
     display: grid;
     padding: 15px 20px;
@@ -46,7 +47,7 @@ body {
     row-gap: 20px;
 }
 
-.Card {
+.card {
     text-align: center;
     outline: none;
     cursor: pointer;

@@ -35,7 +35,7 @@ function Game() {
     }, [bestScore, score])
 
     return (
-        <div className="Game">
+        <div className="game">
             <Title/>
             <ScoreBoard
                 score={score}
