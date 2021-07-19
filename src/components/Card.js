@@ -9,7 +9,7 @@ const Card = (props) =>{
 
     const divStyle = {
         color: 'white',
-        backgroundColor:`${card.name}`,
+        backgroundColor:`${card.name}`
     };
 
     return (

@@ -10,7 +10,10 @@ const cardList = [
     {name: 'Gray', selected : false},
     {name: 'Olive', selected : false},
     {name: 'Aqua', selected : false},
-    {name: 'Teal', selected : false}
+    {name: 'Teal', selected : false},
+    {name: 'Maroon', selected : false},
+    {name: 'Orchid', selected : false},
+    {name: 'Lime', selected : false},
 ]
 
 export default cardList;
