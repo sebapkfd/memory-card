@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import Card from './Card';
 
 const Cardboard = (props) => {
-
     const {setScore, resetScore, cards} = props;
 
     useEffect(() => {

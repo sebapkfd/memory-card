@@ -4,12 +4,9 @@ const Card = (props) =>{
     const {card, select, clean} = props;
 
     const clickCard = () => {
-        if(!card.selected){
-            select(card.cardName);
-        }else{
-            clean();
-        }
+        (card.selected) ? clean() : select(card.cardName);
     }
+
     const divStyle = {
         color: 'white',
         backgroundColor:`${card.cardName}`,
