@@ -2,24 +2,12 @@ import React, {useEffect, useState} from "react";
 import Title from "./Title";
 import ScoreBoard from "./Scoreboard";
 import CardBoard from "./Cardboard";
+import cardList from "./cardList";
 
 function Game() {
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
-    const [cards, setCards] = useState([
-        {cardName: 'Crimson', selected : false},
-        {cardName: 'Navy', selected : false},
-        {cardName: 'Green', selected : false},
-        {cardName: 'Gold', selected : false},
-        {cardName: 'Orange', selected : false},
-        {cardName: 'Purple', selected : false},
-        {cardName: 'Brown', selected : false},
-        {cardName: 'Pink', selected : false},
-        {cardName: 'Gray', selected : false},
-        {cardName: 'Olive', selected : false},
-        {cardName: 'Aqua', selected : false},
-        {cardName: 'Teal', selected : false}
-    ])
+    const [cards, setCards] = useState(cardList);
     
 
     const selectCard = (name) => {    
