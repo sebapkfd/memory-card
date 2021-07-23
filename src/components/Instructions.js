@@ -9,14 +9,22 @@ const Instructions = () => {
                 <p>
                     This game consists in selecting all the items without repeating any of them.
                 </p>
-                <button onClick={() => setShow(false)}>Ok</button>
+                <button 
+                    className='instructions-controller' 
+                    onClick={() => setShow(false)}>
+                        Ok
+                    </button>
             </div>
         )
     }
 
     return (
-        <div>
-            <button onClick={() =>setShow(true)}>Instructions</button>
+        <div id='show-instructions'>
+            <button 
+                className='instructions-controller' 
+                onClick={() =>setShow(true)}>
+                    Instructions
+                </button>
         </div>
     )
 }

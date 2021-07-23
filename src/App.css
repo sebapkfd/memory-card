@@ -10,6 +10,7 @@ html {
     margin: 0;
     height: 100%;
     overflow: hidden;
+    color: white;
 }
 
 body {
@@ -28,12 +29,30 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    color: white;
 }
 
 .title__text {
     font-size: 38px;
     text-align: center;
+}
+
+#instructions,
+#show-instructions {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+#instructions {
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions-controller {
+    width: 100px;
+    margin: 10px;
+    height: 30px;
 }
 
 .card-board {
