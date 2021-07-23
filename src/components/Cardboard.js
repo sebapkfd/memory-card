@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import Card from './Card';
 
 const Cardboard = (props) => {
-    const {setScore, resetScore, cards} = props;
+    const {setScore, resetScore, cards, score} = props;
 
     useEffect(() => {
         for (let i = cards.length - 1; i > 0; i--) {
@@ -16,6 +16,7 @@ const Cardboard = (props) => {
             {cards.map((card) => {
                 return <Card
                     card={card}
+                    score={score}
                     select={setScore}
                     clean={resetScore}
                     key={card.name}

@@ -1,10 +1,12 @@
 import React from "react";
 
 const Card = (props) =>{
-    const {card, select, clean} = props;
+    const {card, select, clean, score} = props;
 
     const clickCard = () => {
-        (card.selected) ? clean() : select(card.name);
+        if (score < 15) {
+            (card.selected) ? clean() : select(card.name);
+        }
     }
 
     const divStyle = {

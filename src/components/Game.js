@@ -10,7 +10,7 @@ function Game() {
     const [bestScore, setBestScore] = useState(0);
     const [cards, setCards] = useState(cardList);
 
-    const selectCard = (name) => {    
+    const selectCard = (name) => {
         let updatedCards = cards.map(card => {
             if(card.name === name){
                 return {...card, selected: !card.selected}
@@ -42,6 +42,7 @@ function Game() {
             <ScoreBoard
                 score={score}
                 bestScore={bestScore}
+                playAgain={resetGame}
             />
             <CardBoard
                 score={score}
@@ -49,6 +50,7 @@ function Game() {
                 resetScore={resetGame}
                 cards={cards}
             />
+            
         </div>
     );
 }
