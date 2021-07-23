@@ -3,6 +3,7 @@ import Title from "./Title";
 import ScoreBoard from "./Scoreboard";
 import CardBoard from "./Cardboard";
 import cardList from "./cardList";
+import Instructions from "./Instructions";
 
 function Game() {
     const [score, setScore] = useState(0);
@@ -36,7 +37,8 @@ function Game() {
 
     return (
         <div className="game">
-            <Title/>
+            <Title />
+            <Instructions />
             <ScoreBoard
                 score={score}
                 bestScore={bestScore}
