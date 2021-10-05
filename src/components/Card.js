@@ -1,7 +1,6 @@
 import React from "react";
 
-const Card = (props) =>{
-    const {card, select, clean, score} = props;
+const Card = ({ card, select, clean, score }) => {
 
     const clickCard = () => {
         if (score < 15) {

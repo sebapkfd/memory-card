@@ -5,7 +5,7 @@ import CardBoard from "./Cardboard";
 import cardList from "./cardList";
 import Instructions from "./Instructions";
 
-function Game() {
+const Game = () => {
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
     const [cards, setCards] = useState(cardList);
