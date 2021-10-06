@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { clearGame, increaseScore, setBestScore, updateCards } from "../redux/gameSlice";
+import { clearGame, increaseScore, setBestScore, shuffleArray, updateCards } from "../redux/gameSlice";
 
 const Card = ({ card }) => {
     const score = useSelector(state => state.game.score);
@@ -15,7 +15,7 @@ const Card = ({ card }) => {
             dispatch(updateCards({ name: card.name }));
             dispatch(increaseScore());
             dispatch(setBestScore());
-
+            dispatch(shuffleArray());
         }
     }
 

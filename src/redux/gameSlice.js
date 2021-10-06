@@ -29,10 +29,16 @@ const GameSlice = createSlice({
             if(state.score >= state.bestScore) {
                 state.bestScore = state.score
             }
+        },
+        shuffleArray: (state, action) => {
+            for (let i = state.cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [state.cards[i], state.cards[j]] = [state.cards[j], state.cards[i]];
+            }
         }
     }
 })
 
-export const { clearGame, updateCards, increaseScore, setBestScore } = GameSlice.actions;
+export const { clearGame, updateCards, increaseScore, setBestScore, shuffleArray } = GameSlice.actions;
 
 export default GameSlice.reducer;
