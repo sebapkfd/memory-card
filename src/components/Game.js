@@ -42,12 +42,12 @@ const Game = () => {
             <ScoreBoard
                 score={score}
                 bestScore={bestScore}
-                playAgain={resetGame}
+                playAgain={() => resetGame()}
             />
             <CardBoard
                 score={score}
-                setScore={selectCard}
-                resetScore={resetGame}
+                setScore={() => selectCard()}
+                resetScore={() => resetGame()}
                 cards={cards}
             />
             
