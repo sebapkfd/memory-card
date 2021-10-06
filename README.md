@@ -7,6 +7,7 @@ Small project, built for assignment as part of the curriculum for [The Odin Proj
 ### Built with: 
 * JavaScript
 * React
+* Redux
 * CSS
 * HTML
 * Git
