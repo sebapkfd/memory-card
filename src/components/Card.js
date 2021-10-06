@@ -1,10 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { clearGame, increaseScore, setBestScore, updateCards } from "../redux/gameSlice";
 
-const Card = ({ card, select, clean, score }) => {
+const Card = ({ card }) => {
+    const score = useSelector(state => state.game.score);
+    const dispatch = useDispatch();
 
     const clickCard = () => {
         if (score < 15) {
-            (card.selected) ? clean() : select(card.name);
+            if (card.selected) {
+                dispatch(clearGame())
+            }
+            dispatch(updateCards({ name: card.name }));
+            dispatch(increaseScore());
+            dispatch(setBestScore());
+
         }
     }
 
@@ -14,7 +25,7 @@ const Card = ({ card, select, clean, score }) => {
     };
 
     return (
-        <div className="card" onClick={clickCard} style={divStyle}>
+        <div className="card" onClick={() => clickCard()} style={divStyle}>
             <h3>{card.name}</h3>
         </div>
     )

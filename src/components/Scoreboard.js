@@ -1,10 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { clearGame } from "../redux/gameSlice";
+import { useSelector } from "react-redux";
 
-const Scoreboard = ({ score, bestScore, playAgain }) => {
+const Scoreboard = () => {
+    const dispatch = useDispatch();
+    const score = useSelector(state => state.game.score);
+    const bestScore = useSelector(state => state.game.bestScore);
+
     return (score === 15) ? (
         <div className='score-board'>
             <h2>You have won!</h2>
-            <button onClick={() => playAgain()}>Play Again</button>
+            <button onClick={() => dispatch(clearGame())}>Play Again</button>
         </div>
     ) : (
         <div className="score-board">
